@@ -1,0 +1,14 @@
+<div>
+  <h1><%= @name %></h1>
+
+  <ul>
+    <li>e-mail: <%= @email %></li>
+    <li>interests: 
+      <ul>
+        <% @interests.each do |interest| %>
+          <%= "#{interest}" + "," %>
+        <% end %>
+      </ul>
+    </li>
+  </ul>
+</div>
