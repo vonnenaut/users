@@ -1,15 +1,32 @@
 body {
   font-family: 'Vollkorn', serif;
-}
-
-body {
-    color: #777;
+  color: 'white';
+  margin: auto;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
+.container {
+  display: grid;
+  border: 2px blue solid;
+  grid-template-columns: 25% 50% 25%;
+  grid-template-rows: 20% 50% 30%; 
+  grid-gap: 50px;
+}
+
+header {
+  grid-area: header;
+}
+
+.content {
+  grid-area:  content;
+}
+
+footer {
+  grid-area: footer;  
+}
 
 /* -- Responsive Styles (Media Queries) ------------------------------------- */
 

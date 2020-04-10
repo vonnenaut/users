@@ -10,12 +10,12 @@
   </head>
 
   <body>
-    <div>
+    <div class="container">
       <%= yield %>
+      <footer>
+        There are <%= @num_users %> users with a total of <%= @num_interests %> interests.
+      </footer>
     </div>
-    <footer>
-      There are <%= @num_users %> users with a total of <%= @num_interests %> interests.
-    </footer>
   </body>
 </html> 
  
