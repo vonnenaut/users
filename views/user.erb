@@ -1,14 +1,21 @@
 <div>
-  <h1><%= @name %></h1>
+  <header>
+    <h1><%= @name %></h1>
+    <hr>
+  </header>
 
-  <ul>
+  <ul class="content">
     <li>e-mail: <%= @email %></li>
     <li>interests: 
-      <ul>
-        <% @interests.each do |interest| %>
-          <%= "#{interest}" + "," %>
-        <% end %>
-      </ul>
+      <%= @interests.join(", ") %>
     </li>
   </ul>
+
+  <footer class="user-footer">
+    <% @other_users.each do |user| %>
+      <a href="/users/<%= user %>"><%= user.to_s %></a>
+    <% end %>
+    <br>
+    <a href="/">|| back ||</a>
+  </footer>
 </div>

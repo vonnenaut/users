@@ -1,31 +1,74 @@
 body {
   font-family: 'Vollkorn', serif;
   color: 'white';
-  margin: auto;
+  margin: 0 auto;
+  text-align: center;
 }
 
 ul {
   list-style: none;
 }
 
-.container {
-  display: grid;
-  border: 2px blue solid;
-  grid-template-columns: 25% 50% 25%;
-  grid-template-rows: 20% 50% 30%; 
-  grid-gap: 50px;
+h1 {
+  font-size: 1.7em;
+  padding: 0;
 }
 
 header {
   grid-area: header;
+  text-align: left;
+  margin-top: 10%;
+  padding: 0;
+  width: 100%;
+}
+
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 5px;
+  position: relative;
+  grid-gap: 10px;
+  grid-template-areas: "header"
+  "content"
+  "footer";
+  grid-template-columns: 80%;
+  grid-template-rows: 150px 200px 150px;
 }
 
 .content {
-  grid-area:  content;
+  grid-area: content;
+  width: 100%;
+  min-height: 35%;
+  margin-left: 0% 10% 0% 10%;
+  padding: 10px;
+  text-align: left;
 }
 
-footer {
-  grid-area: footer;  
+.user-footer {
+  width: 100%;
+  grid-area: content;
+  margin: 5% 0% 10% 0%;
+  text-align: center;
+}
+
+.layout-footer {
+  width: 100%;
+  grid-area: footer;
+  margin-top: auto;
+  text-align: center;
+}
+
+.users {
+  margin: 0px;
+  padding: 0px;
 }
 
 /* -- Responsive Styles (Media Queries) ------------------------------------- */
